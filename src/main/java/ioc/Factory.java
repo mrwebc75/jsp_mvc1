@@ -8,6 +8,8 @@ import dao.BoardMapperDAO;
 import dao.UserMapper;
 import dao.UserMapperDAO;
 import myBatis.MyBatisManager;
+import srv.BoardService;
+import srv.BoardServiceImpl;
 import srv.UserService;
 import srv.UserServiceImpl;
 
@@ -26,8 +28,18 @@ public enum Factory {
 
   // jsp나 컨트롤러에서 서비스객체가 필요할 경우 Factory의 get서비스() 이용
   private UserService userSrv = new UserServiceImpl(userDao);
-
   public UserService getUserSrv() {
     return userSrv;
   }
+   
+  private BoardService boardSrv = new BoardServiceImpl(boardDao);
+  public BoardService getBoardSrv() {
+    return boardSrv;
+  }
+  
 }
+
+
+
+
+
