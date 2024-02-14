@@ -24,8 +24,23 @@
 		
 		<p>${name}님 환영합니다~!</p>
 		
+		<style>
+			td{
+				padding:0 15px;
+				text-align:center;
+			}
+		</style>
 		
 		<table>
+			<thead>
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col">제목</th>
+					<th scope="col">닉네임</th>
+					<th scope="col">등록일</th>
+					<th scope="col">조회수</th>
+				</tr>
+			</thead>
 			<tbody>
 			
 			  <c:forEach items="${list}" var="dto">
@@ -41,6 +56,8 @@
 				
 			</tbody>
 		</table>
+		
+		<p><a href="./write.jsp">새글등록</a></p>
 	</div>
 </body>
 </html>

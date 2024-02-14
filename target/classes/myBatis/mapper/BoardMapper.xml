@@ -9,4 +9,9 @@
 	<select id="findAll" resultType="bVo">
 		select * from board order by seq desc;
 	</select>
+	
+	<insert id="save" parameterType="bVo">
+		insert into board (userid, title, content, nickname) 
+		values (#{userid}, #{title}, #{content}, #{nickname});	
+	</insert>
 </mapper>

@@ -45,4 +45,17 @@ public class BoardServiceImpl implements BoardService {
 
   }
 
+  @Override
+  public int save(BoardDTO dto) {
+
+    // DTO를 VO로 변환하는 작업
+    BoardVO vo = new BoardVO();
+    vo.setUserid(dto.getUserid());
+    vo.setTitle(dto.getTitle());
+    vo.setContent(dto.getContent());
+    vo.setNickname(dto.getNickname());
+
+    return boardDao.save(vo);
+  }
+
 }

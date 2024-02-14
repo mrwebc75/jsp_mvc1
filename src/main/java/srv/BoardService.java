@@ -7,4 +7,6 @@ import model.BoardDTO;
 public interface BoardService {
 
   List<BoardDTO> findAll();
+
+  int save(BoardDTO dto);
 }

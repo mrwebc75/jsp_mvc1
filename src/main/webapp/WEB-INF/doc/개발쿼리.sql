@@ -3,6 +3,8 @@ create database mvc1 default character set utf8;
 
 use mvc1;
 
+show tables;
+
 create table user (
 	userid varchar(50) primary key,
 	password varchar(50) not null,
@@ -20,7 +22,7 @@ insert into user values
 select * from user;
 
 
-
+drop table if exists board;
 create table board (
 	seq	int primary key auto_increment,
 	title varchar(200) not null,
@@ -60,7 +62,10 @@ values(6, '여섯번째 게시물', '마이콜', '여섯번째 게시물 내용.
 insert into board (seq, title, nickname, content, regdate, userid) 
 values (7 , '일곱번째 게시물', '둘리', '일곱번째 게시물 내용.', subdate(curdate(), interval 1 day), 'duly');
 
+	insert into board (userid, title, content, nickname) 
+	values ('캔디', '들장미 소녀 캔디', '외로워도 슬퍼도 나는 안울어~!', 'candy');
 
+select * from board;
 
 
 

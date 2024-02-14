@@ -24,4 +24,9 @@ public class BoardMapperDAO implements BoardMapper {
     return mp().findAll();
   }
 
+  @Override
+  public int save(BoardVO vo) {
+    return mp().save(vo);
+  }
+
 }
