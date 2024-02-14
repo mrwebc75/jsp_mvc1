@@ -46,7 +46,7 @@
 			  <c:forEach items="${list}" var="dto">
 				<tr>
 					<td>${dto.seq}</td>
-					<td>${dto.title}</td>
+					<td><a href="./read.jsp?seq=${dto.seq}">${dto.title}</a></td>
 					<td>${dto.nickname}</td>
 					<td>${dto.regdate}</td>
 					<td>${dto.cnt}</td>

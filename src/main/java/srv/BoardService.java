@@ -9,4 +9,6 @@ public interface BoardService {
   List<BoardDTO> findAll();
 
   int save(BoardDTO dto);
+
+  BoardDTO getOne(int seq);
 }

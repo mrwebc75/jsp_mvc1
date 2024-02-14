@@ -26,7 +26,24 @@ public class BoardMapperDAO implements BoardMapper {
 
   @Override
   public int save(BoardVO vo) {
-    return mp().save(vo);
+    int result = 0;
+
+    // 트랜잭션 예외처리
+    try {
+      result = mp().save(vo);
+      sqlSession.commit();
+
+    } catch (Exception e) {
+      e.printStackTrace();
+      sqlSession.rollback();
+    }
+
+    return result;
+  }
+
+  @Override
+  public BoardVO getOne(int seq) {
+    return mp().getOne(seq);
   }
 
 }

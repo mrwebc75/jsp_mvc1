@@ -9,4 +9,6 @@ public interface BoardMapper {
   List<BoardVO> findAll();
 
   int save(BoardVO vo);
+
+  BoardVO getOne(int seq);
 }
