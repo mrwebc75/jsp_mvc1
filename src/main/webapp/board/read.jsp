@@ -45,7 +45,15 @@
 	                         <td>
 	                             <textarea name="content" cols="40" rows="10">${dto.content}</textarea>
 	                         </td>
-	                     </tr>	                     
+	                     </tr>	       
+	                     <tr>
+	                         <th scope="row">등록일</th>
+	                         <td>${dto.regdate}</td>
+	                     </tr>	  	                                   
+	                     <tr>
+	                         <th scope="row">조회수</th>
+	                         <td>${dto.cnt}</td>
+	                     </tr>	  	                                   
 	                </tbody>  
 				</table>
 			</fieldset>

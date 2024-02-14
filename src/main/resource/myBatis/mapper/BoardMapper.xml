@@ -20,4 +20,30 @@
 	</insert>
 	
 	
+	<update id="increaseCnt">
+		update board
+		<set>
+			<if test="seq!=null">
+				cnt=cnt+1 where seq=#{seq};
+			</if>
+		</set>
+	</update>
+
+
+
+
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
