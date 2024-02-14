@@ -3,6 +3,8 @@ package ioc;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import dao.BoardMapper;
+import dao.BoardMapperDAO;
 import dao.UserMapper;
 import dao.UserMapperDAO;
 import myBatis.MyBatisManager;
@@ -20,6 +22,7 @@ public enum Factory {
   private SqlSession sqlSession = sqlSessionFactory.openSession(false);// Not Autocommit
 
   private UserMapper userDao = new UserMapperDAO(sqlSession);
+  private BoardMapper boardDao = new BoardMapperDAO(sqlSession);
 
   // jsp나 컨트롤러에서 서비스객체가 필요할 경우 Factory의 get서비스() 이용
   private UserService userSrv = new UserServiceImpl(userDao);
