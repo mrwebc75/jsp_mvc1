@@ -11,4 +11,8 @@ public interface BoardService {
   int save(BoardDTO dto);
 
   BoardDTO getOne(int seq);
+
+  int increaseCnt(int seq);
+
+  int update(BoardDTO dto);
 }

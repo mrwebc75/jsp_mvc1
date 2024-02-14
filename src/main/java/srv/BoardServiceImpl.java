@@ -60,6 +60,9 @@ public class BoardServiceImpl implements BoardService {
 
   @Override
   public BoardDTO getOne(int seq) {
+
+    increaseCnt(seq);
+
     BoardVO vo = boardDao.getOne(seq);
 
     BoardDTO dto = new BoardDTO();
@@ -72,6 +75,26 @@ public class BoardServiceImpl implements BoardService {
     dto.setUserid(vo.getUserid());
 
     return dto;
+  }
+
+  @Override
+  public int increaseCnt(int seq) {
+
+    int result = boardDao.increaseCnt(seq);
+    return result;
+  }
+
+  @Override
+  public int update(BoardDTO dto) {
+
+    // DTO를 VO로 변환하는 작업
+    BoardVO vo = new BoardVO();
+    vo.setUserid(dto.getUserid());
+    vo.setTitle(dto.getTitle());
+    vo.setContent(dto.getContent());
+    vo.setNickname(dto.getNickname());
+
+    return boardDao.update(vo);
   }
 
 }

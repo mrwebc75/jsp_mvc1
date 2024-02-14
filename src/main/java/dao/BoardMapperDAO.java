@@ -46,4 +46,37 @@ public class BoardMapperDAO implements BoardMapper {
     return mp().getOne(seq);
   }
 
+  @Override
+  public int increaseCnt(int seq) {
+
+    int result = 0;
+
+    try {
+      result = mp().increaseCnt(seq);
+      sqlSession.commit();
+    } catch (Exception e) {
+      e.printStackTrace();
+      sqlSession.rollback();
+    }
+
+    return result;
+  }
+
+  @Override
+  public int update(BoardVO vo) {
+
+    int result = 0;
+
+    try {
+      result = mp().update(vo);
+      sqlSession.commit();
+    } catch (Exception e) {
+      e.printStackTrace();
+      sqlSession.rollback();
+    }
+
+    return result;
+
+  }
+
 }

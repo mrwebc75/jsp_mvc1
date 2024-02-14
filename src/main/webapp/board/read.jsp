@@ -23,8 +23,8 @@
 <body>
 	<div id="wrap">
 		<h1>상세 게시글</h1>
-		<form action="./writeCtrl.jsp" method="post">
-			
+		<form action="./editCtrl" method="post">
+			<input type="hidden" name="seq" value="${dto.seq}">
 			<fieldset>
 				<legend>글내용</legend>
 				
@@ -37,8 +37,8 @@
 	                         </td>
 	                     </tr>
 	                     <tr>
-	                         <th scope="row"><label for="nickname"></label>닉네임</th>
-	                         <td><input type="text" id="nickname" name="nickname" value="${dto.nickname}" /></td>
+	                         <th scope="row"><label for="nickname">닉네임</label></th>
+	                         <td><input type="text" id="nickname" name="nickname" value="${dto.nickname}" readonly /></td>
 	                     </tr>
 	                     <tr>
 	                         <th scope="row"><label for="content">내용</label></th>
@@ -57,8 +57,26 @@
 	                </tbody>  
 				</table>
 			</fieldset>
-			<p><button>글등록</button></p>
+			<p><button>수정하기</button></p>
 		</form>
+		<p>
+			<a href="./write.jsp">글등록</a> <br>
+			<a href="./deleteCtrl.jsp?seq=${dto.seq}">글삭제</a> <br>
+			<a href="./list.jsp">글목록</a> <br>
+		</p>
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

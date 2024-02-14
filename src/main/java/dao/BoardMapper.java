@@ -13,4 +13,6 @@ public interface BoardMapper {
   BoardVO getOne(int seq);
 
   int increaseCnt(int seq);
+
+  int update(BoardVO vo);
 }
