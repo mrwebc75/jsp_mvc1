@@ -65,6 +65,7 @@ public class BoardMapperDAO implements BoardMapper {
   @Override
   public int update(BoardVO vo) {
 
+    System.out.println(vo.toString());
     int result = 0;
 
     try {

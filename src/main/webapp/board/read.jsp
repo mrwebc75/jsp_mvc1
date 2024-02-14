@@ -23,7 +23,7 @@
 <body>
 	<div id="wrap">
 		<h1>상세 게시글</h1>
-		<form action="./editCtrl" method="post">
+		<form action="./editCtrl.jsp" method="post">
 			<input type="hidden" name="seq" value="${dto.seq}">
 			<fieldset>
 				<legend>글내용</legend>

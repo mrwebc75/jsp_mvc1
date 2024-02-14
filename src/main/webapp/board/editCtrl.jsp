@@ -22,7 +22,7 @@
 	BoardService boardSrv = Factory.INSTANCE.getBoardSrv();
 	boardSrv.update(dto);
 	
-	response.sendRedirect("/list.jsp");
+	response.sendRedirect("./list.jsp");
 %>
 
 

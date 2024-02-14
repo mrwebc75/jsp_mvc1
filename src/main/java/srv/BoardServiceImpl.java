@@ -89,6 +89,8 @@ public class BoardServiceImpl implements BoardService {
 
     // DTO를 VO로 변환하는 작업
     BoardVO vo = new BoardVO();
+
+    vo.setSeq(dto.getSeq());
     vo.setUserid(dto.getUserid());
     vo.setTitle(dto.getTitle());
     vo.setContent(dto.getContent());

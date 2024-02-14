@@ -31,8 +31,10 @@
 
 
 	<update id="update" parameterType="bVo">
-		update board set 
-		title = #{bVo.title} ,content=#{bVo.content} where seq=#{seq};
+		update board 
+			set title= #{title} ,
+				content=#{content} 
+			where seq=#{seq};
 	</update>
 
 </mapper>
