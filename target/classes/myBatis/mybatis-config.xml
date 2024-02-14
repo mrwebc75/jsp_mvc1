@@ -6,6 +6,7 @@
 
   <typeAliases>
   	<typeAlias type="model.UserVO" alias="uVo" />
+  	<typeAlias type="model.BoardVO" alias="bVo" />
   </typeAliases>	
 
   <!-- DB 연결정보 설정 -> 마이바티즈 자동 연결(나중에 이 부분은 스프링 설정파일 root-context.xml 파일로 이동하게 된다. -->

@@ -38,6 +38,9 @@
 	UserDTO dto = userSrv.getOne(loginInfo);
 
 	if(dto!=null){//로그인 성공
+	  session.setAttribute("userid", dto.getUserid());
+	  session.setAttribute("name", dto.getName());
+	  
 	  response.sendRedirect("./list.jsp");
 	}else{//로그인 실패
 	  response.sendRedirect("../index.jsp");
