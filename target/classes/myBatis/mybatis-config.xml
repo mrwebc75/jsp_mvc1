@@ -25,6 +25,7 @@
   <mappers>
   	<!-- SQL 쿼리를 정의한 xml 설정파일 -->
     <mapper resource="myBatis/mapper/UserMapper.xml"/>
+    <mapper resource="myBatis/mapper/BoardMapper.xml"/>
   </mappers>
 </configuration>
 

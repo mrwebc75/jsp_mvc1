@@ -23,6 +23,37 @@
 		<h1>글목록</h1>
 		
 		<p>${name}님 환영합니다~!</p>
+		
+		
+		<table>
+			<tbody>
+			
+			  <c:forEach items="${list}" var="dto">
+				<tr>
+					<td>${dto.seq}</td>
+					<td>${dto.title}</td>
+					<td>${dto.nickname}</td>
+					<td>${dto.regdate}</td>
+					<td>${dto.cnt}</td>
+				</tr>
+			  </c:forEach>
+				
+				
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
