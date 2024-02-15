@@ -15,4 +15,6 @@ public interface BoardMapper {
   int increaseCnt(int seq);
 
   int update(BoardVO vo);
+
+  void delete(int seq);
 }

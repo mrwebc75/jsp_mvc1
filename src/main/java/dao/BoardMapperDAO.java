@@ -80,4 +80,17 @@ public class BoardMapperDAO implements BoardMapper {
 
   }
 
+  @Override
+  public void delete(int seq) {
+
+    try {
+      mp().delete(seq);
+      sqlSession.commit();
+    } catch (Exception e) {
+      e.printStackTrace();
+      sqlSession.rollback();
+    }
+
+  }
+
 }

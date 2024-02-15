@@ -67,7 +67,11 @@ values (7 , '일곱번째 게시물', '둘리', '일곱번째 게시물 내용.'
 
 select * from board;
 
+select * from board where seq=10;
 
+update board set cnt=cnt+1 where seq=10;
+
+update board set title = '개구리 왕코' , content = '안녕' where seq=10;
 
 
 

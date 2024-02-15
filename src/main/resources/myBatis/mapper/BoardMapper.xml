@@ -37,6 +37,10 @@
 			where seq=#{seq};
 	</update>
 
+	<delete id="delete">
+		delete from board where seq = #{seq};
+	</delete>
+	
 </mapper>
 
 

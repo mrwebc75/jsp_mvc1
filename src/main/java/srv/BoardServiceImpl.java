@@ -99,4 +99,9 @@ public class BoardServiceImpl implements BoardService {
     return boardDao.update(vo);
   }
 
+  @Override
+  public void delete(int seq) {
+    boardDao.delete(seq);
+  }
+
 }

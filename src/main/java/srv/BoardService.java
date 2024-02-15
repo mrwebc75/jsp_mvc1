@@ -15,4 +15,6 @@ public interface BoardService {
   int increaseCnt(int seq);
 
   int update(BoardDTO dto);
+
+  void delete(int seq);
 }
